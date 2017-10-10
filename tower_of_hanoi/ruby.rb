@@ -1,6 +1,4 @@
 class Hanoi
-  attr_reader :steps
-
   POLES = [
     POLE_LEFT   = 'LEFT',
     POLE_CENTER = 'CENTER',
@@ -26,7 +24,6 @@ class Hanoi
     hanoi(disks - 1, pole_c, pole_b, pole_a)
   end
 end
-
 
 puts 'Please enter the number of disks'
 disks = gets.to_i
