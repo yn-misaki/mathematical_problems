@@ -3,6 +3,7 @@
 
 ## solution
 - Tower of Hanoi
+- Sieve of Eratosthenes
 
 ## languages
 - Ruby
