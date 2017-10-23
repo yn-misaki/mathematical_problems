@@ -3,7 +3,8 @@
 
 ## solution
 - Tower of Hanoi
-- Sieve of Eratosthenes
+- Prime Number
+  - Sieve of Eratosthenes
 
 ## languages
 - Ruby
