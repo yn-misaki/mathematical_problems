@@ -1,22 +1,22 @@
 class PrimeNumber
   BASE_NUMBER = 2
 
-  def initialize max_number
-    @max_number  = max_number
-    @candidates  = [BASE_NUMBER]
+  attr_reader :numbers
+
+  def initialize
+    @numbers = [BASE_NUMBER]
   end
 
-  def search
-    (@candidates.first + 1).upto(@max_number).each do |number|
-      @candidates << number if is_divisible?(number)
+  def search max_number
+    (@numbers.first + 1).upto(max_number).each do |target_number|
+      @numbers << target_number if is_divisible?(target_number)
     end
-    @candidates
   end
 
   private
 
-  def is_divisible? number
-    @candidates.all? { |candidate| number % candidate != 0 }
+  def is_divisible? target_number
+    @numbers.all? { |number| target_number % number != 0 }
   end
 end
 
@@ -24,4 +24,6 @@ puts 'Please enter the number'
 number = gets.to_i
 puts "Let's find Prime Numbers"
 
-puts "Prime Number: #{PrimeNumber.new(number).search}"
+p = PrimeNumber.new
+p.search(number)
+puts "Prime Number: #{p.numbers.join(', ')}"
