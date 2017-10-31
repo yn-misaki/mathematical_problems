@@ -5,6 +5,7 @@
 - Tower of Hanoi
 - Prime Number
   - Sieve of Eratosthenes
+- Fibonacci Sequence
 
 ## languages
 - Ruby
